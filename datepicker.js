@@ -328,6 +328,7 @@ class DatePicker extends Component {
       minDate,
       maxDate,
       minuteInterval,
+      locale,
       timeZoneOffsetInMinutes,
       cancelBtnText,
       confirmBtnText,
@@ -392,6 +393,7 @@ class DatePicker extends Component {
                         onDateChange={this.onDateChange}
                         minuteInterval={minuteInterval}
                         timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
+                        locale={locale}
                         style={[Style.datePicker, customStyles.datePicker]}
                       />
                     </View>
@@ -454,6 +456,7 @@ DatePicker.propTypes = {
   androidMode: PropTypes.oneOf(['calendar', 'spinner', 'default']),
   date: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date), PropTypes.object]),
   format: PropTypes.string,
+  locale: PropTypes.string,
   minDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
   maxDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
   height: PropTypes.number,
