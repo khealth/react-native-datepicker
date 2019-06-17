@@ -418,10 +418,10 @@ class DatePicker extends Component {
                   <TouchableComponent
                     style={[
                       Style.datePickerMask,
-                      this.setDatePickerMask
+                      this.setDatePickerMask()
                     ]}
                     activeOpacity={1}
-                    underlayColor={this.getUnderlayColor}
+                    underlayColor={this.getUnderlayColor()}
                     onPress={this.onPressMask}
                   >
                     <TouchableComponent
