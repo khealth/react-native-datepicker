@@ -58,10 +58,14 @@ class DatePicker extends Component {
 
   componentWillMount() {
     // ignore the warning of Failed propType for date of DatePickerIOS, will remove after being fixed by official
-    if (!console.ignoredYellowBox) {
-      console.ignoredYellowBox = [];
-    }
-    console.ignoredYellowBox.push('Warning: Failed propType');
+
+    // fix Production builds failing with TypeError undefined is not an object (evaluating 'console.ignoredYellowBox.push')
+    // https://github.com/xgfe/react-native-datepicker/issues/235
+        
+    // if (!console.ignoredYellowBox) {
+    //   console.ignoredYellowBox = [];
+    // }
+    // console.ignoredYellowBox.push('Warning: Failed propType');
   }
 
   componentWillReceiveProps(nextProps) {
